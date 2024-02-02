@@ -1,6 +1,6 @@
 Project weekly log
 
-Week 1:
+S1 - Week 1:
 
 •	Choose project and supervisor.
 •	Choose Google Colab as main Python editor.
@@ -8,7 +8,7 @@ Week 1:
 •	Discovered MIDI files can be split into individual tracks, but track instruments are rarely labelled. Might be hard to distinguish between rhythm/bass/drum sections.
 •	Had a play with the Lahk data set. Discovered tracks are often in strange file configurations. Might be useful to combine or use different data sets for different purposes.
 
-Week 2:
+S1 - Week 2:
 
 •	Started some reading on various music generation techniques. Found a good paper that outlines different approaches.
 •	Looked into other datasets apart from Lahk such as googleAI magenta.
@@ -18,7 +18,7 @@ Week 2:
 •	Finished first draft of project proposal.
 •	Read A LOT of research papers.
 
-Week3:
+S1 - Week3:
 
 •	Submitted Project proposal to Kingsley via email
 •	Started uploading data sets to google drive for colab use
@@ -32,7 +32,7 @@ Week3:
 - Generate all tracks at once through a more complicated model.
 - Hybrid approach. Generate initial single track then use multi track model that uses the initial track to generate additional tracks.
 
-Week 4:
+S1 - Week 4:
 •	Started initial work on attention RNN for single track MIDI output
 •	Looking into OpenAI Musenet and sparse transformers
 •	Decided to try and play with my own RNN arctitecture based on attentive RNNs
@@ -40,17 +40,31 @@ Week 4:
 •	Did sequence padding to the average length of data for uniform inputs
 •	First steps in defining the RNN model (LTSM)
 
-Week 5:
+S1 - Week 5:
 •	Realised I might be running before I can walk…. Decided to try a simpler approach first (simple multi layer LTSM regression task might not work). And will document my improvements to the model and data pre processing as I go and learn more. Eventually ending up with an attention mechanism.
 •	Various experiments trying to get to grips with MIDI files and potential pythons framworks I can use. Found great tutorial on Kaggle.
 •	Tried very hard to get tensorflow to work with local gpu but no luck. Might have to use colab plus
 •	Started interim report
 •	Researched tokenization methods more thoroughly 
 
-Week 6:
+S1 - Week 6:
 •	Continued writing up interim report
 •	Explored other methods of processing
 •	Tried to get home PC set up with graphics card to run models
 •	Finished interim first draft
 •	Sent first draft to supervisor for feedback
 •	Managed to get home PC set up with pytorch using GPU processing
+
+Christmas break:
+•	Gathered data to be used in training
+•	Started 1st generation of main prototype model
+•	Decided on preprocssing steps
+•	Pre processed data using MidiTok library
+•	Used transformer library with lots of trial and error to train mistral model
+• Trained and generated on smaller data set
+•	First generated output with mutli track capabilities
+• Refined model and training in second generation protoype using more data
+•	Second protoype model was a bit simpler for resource reasons but trained on more data
+• Second prototype generated output but neede more structure
+•	Fine tuned second prototype model with quite a bit more data
+• Second prototype fine tuned generated music with more structure
