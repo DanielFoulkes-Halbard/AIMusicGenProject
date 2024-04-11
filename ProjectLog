@@ -25,7 +25,7 @@ S1 - Week3:
 +	Sourcing different data sets to use with model:lahk, bitmidi, ADL piano midi and classical archives.
 +	ADL piano is a subset based off lahk only using the “piano” parts so would be good for rhythme maybe.
 +	Had meeting with Kingsley he mentioned Pre processing data: Relative pitch instead of absolute pitch, filter (normalise key). Both all happy so far. Mentioned getting a single track prototype in the works for week 7 interim report.
-+	Decided to focus on classical music for prototype
++	Decided to focus on classical music for prototype.
 +	Made ADL_classic dataset mainly from ADL piano(1160) with small amounts from classical archive(5) and bitmidi(40). Combined them via python colab and backed them up. Some files in ADL piano would not load due to weird sharp properties.
 +	Thoughts on how to approach development:
 + Generate single track first which satisfies structure, rhythm dynamics etc and sequentially add tracks to original somehow.
