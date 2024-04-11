@@ -2,69 +2,129 @@ Project weekly log
 
 S1 - Week 1:
 
-•	Choose project and supervisor.
-•	Choose Google Colab as main Python editor.
-•	Researched various Python libraries that can deal with MIDI files.
-•	Discovered MIDI files can be split into individual tracks, but track instruments are rarely labelled. Might be hard to distinguish between rhythm/bass/drum sections.
-•	Had a play with the Lahk data set. Discovered tracks are often in strange file configurations. Might be useful to combine or use different data sets for different purposes.
++	Choose project and supervisor.
++	Choose Google Colab as main Python editor.
++	Researched various Python libraries that can deal with MIDI files.
++	Discovered MIDI files can be split into individual tracks, but track instruments are rarely labelled. Might be hard to distinguish between rhythm/bass/drum sections.
++	Had a play with the Lahk data set. Discovered tracks are often in strange file configurations. Might be useful to combine or use different data sets for different purposes.
 
 S1 - Week 2:
 
-•	Started some reading on various music generation techniques. Found a good paper that outlines different approaches.
-•	Looked into other datasets apart from Lahk such as googleAI magenta.
-•	Started weekly log.
-•	Started project proposal.
-•	Set up calendar for weekly work rota.
-•	Finished first draft of project proposal.
-•	Read A LOT of research papers.
++	Started some reading on various music generation techniques. Found a good paper that outlines different approaches.
++	Looked into other datasets apart from Lahk such as googleAI magenta.
++	Started weekly log.
++	Started project proposal.
++	Set up calendar for weekly work rota.
++	Finished first draft of project proposal.
++	Read A LOT of research papers.
 
 S1 - Week3:
 
-•	Submitted Project proposal to Kingsley via email
-•	Started uploading data sets to google drive for colab use
-•	Sourcing different data sets to use with model:lahk, bitmidi, ADL piano midi and classical archives
-•	ADL piano is a subset based off lahk only using the “piano” parts so would be good for rhyme maybe
-•	Had meeting with Kingsley he mentioned Pre processing data: Relative pitch instead of absolute pitch, filter (normalise key). Both all happy so far. Mentioned getting a single track prototype in the works for week 7 interim report.
-•	Decided o focus on classical music
-•	Made ADL_classic dataset mainly from ADL piano(1160) with small amounts from classical archive(5) and bitmidi(40). Combined them via python colab and backed them up. Some files in ADL piano would not load due to weird sharp properties.
-•	Thoughts on how to approach development:
-* Generate single track first which satisfies structure, rhythm dynamics etc and sequentially add tracks to original somehow.
-* Generate all tracks at once through a more complicated model.
-* Hybrid approach. Generate initial single track then use multi track model that uses the initial track to generate additional tracks.
++	Submitted Project proposal to Kingsley via email.
++	Started uploading data sets to google drive for colab use.
++	Sourcing different data sets to use with model:lahk, bitmidi, ADL piano midi and classical archives.
++	ADL piano is a subset based off lahk only using the “piano” parts so would be good for rhythme maybe.
++	Had meeting with Kingsley he mentioned Pre processing data: Relative pitch instead of absolute pitch, filter (normalise key). Both all happy so far. Mentioned getting a single track prototype in the works for week 7 interim report.
++	Decided to focus on classical music for prototype
++	Made ADL_classic dataset mainly from ADL piano(1160) with small amounts from classical archive(5) and bitmidi(40). Combined them via python colab and backed them up. Some files in ADL piano would not load due to weird sharp properties.
++	Thoughts on how to approach development:
++ Generate single track first which satisfies structure, rhythm dynamics etc and sequentially add tracks to original somehow.
++ Generate all tracks at once through a more complicated model.
++ Hybrid approach. Generate initial single track then use multi track model that uses the initial track to generate additional tracks.
 
 S1 - Week 4:
-•	Started initial work on attention RNN for single track MIDI output
-•	Looking into OpenAI Musenet and sparse transformers
-•	Decided to try and play with my own RNN arctitecture based on attentive RNNs
-•	Pre-processed data in [track, note sequence] format
-•	Did sequence padding to the average length of data for uniform inputs
-•	First steps in defining the RNN model (LTSM)
++	Started initial work on attention RNN for single track MIDI output.
++	Looking into OpenAI Musenet and sparse transformers.
++	Decided to try and play with my own RNN arctitecture based on attentive RNNs.
++	Pre-processed data in [track, note sequence] format.
++	Did sequence padding to the average length of data for uniform inputs.
++	First steps in defining the RNN model (LTSM).
 
 S1 - Week 5:
-•	Realised I might be running before I can walk…. Decided to try a simpler approach first (simple multi layer LTSM regression task might not work). And will document my improvements to the model and data pre processing as I go and learn more. Eventually ending up with an attention mechanism.
-•	Various experiments trying to get to grips with MIDI files and potential pythons framworks I can use. Found great tutorial on Kaggle.
-•	Tried very hard to get tensorflow to work with local gpu but no luck. Might have to use colab plus
-•	Started interim report
-•	Researched tokenization methods more thoroughly 
++	Realised I might be running before I can walk…. Decided to try a simpler approach first (simple multi layer LTSM regression task might not work). And will document my improvements to the model and data pre processing as I go and learn more. Eventually ending up with an attention mechanism.
++	Various experiments trying to get to grips with MIDI files and potential pythons framworks I can use. Found great tutorial on Kaggle.
++	Tried very hard to get tensorflow to work with local gpu but no luck. Might have to use colab plus.
++	Started interim report.
++	Researched tokenization methods more thoroughly .
 
 S1 - Week 6:
-•	Continued writing up interim report
-•	Explored other methods of processing
-•	Tried to get home PC set up with graphics card to run models
-•	Finished interim first draft
-•	Sent first draft to supervisor for feedback
-•	Managed to get home PC set up with pytorch using GPU processing
++	Continued writing up interim report.
++ Explored other methods of processing.
++	Tried to get home PC set up with graphics card to run models.
++	Finished interim first draft.
++	Sent first draft to supervisor for feedback.
++	Managed to get home PC set up with pytorch using GPU processing.
+
+S1 - Week 7- 11:
+No progress as focusing on other module deadlines. 
 
 Christmas break:
-•	Gathered data to be used in training
-•	Started 1st generation of main prototype model
-•	Decided on preprocssing steps
-•	Pre processed data using MidiTok library
-•	Used transformer library with lots of trial and error to train mistral model
-• Trained and generated on smaller data set
-•	First generated output with mutli track capabilities
-• Refined model and training in second generation protoype using more data
-•	Second protoype model was a bit simpler for resource reasons but trained on more data
-• Second prototype generated output but neede more structure
-•	Fine tuned second prototype model with quite a bit more data
-• Second prototype fine tuned generated music with more structure
++	Gathered data to be used in training.
++	Started 1st generation of main prototype model.
++	Decided on preprocssing steps.
++	Pre processed data using MidiTok library.
++	Used transformer library with lots of trial and error to train mistral model.
++ Trained and generated on smaller data set.
++	First generated output with multi track capabilities.
++ Refined model and training in second generation protoype using more data.
++	Second protoype model was a bit simpler for resource reasons but trained on more data.
++ Second prototype generated output but neede more structure.
++	Fine tuned second prototype model with quite a bit more data.
++ Second prototype fine tuned generated music with more structure.
+
+S2 - Week 1:
++ Transition second prototype into base of final model.
++ Experimenting with different learning rate schedulers.
++ Training model on higher amounts of data to assess the performance.
++ Started researching optimisation methods for transfomer models.
++ Realised training is taking too long as model becomes complex.
++ Realise there is a significant hardware bottleneck on personel PC.
+
+S2 - Week 2:
++ Started exploring other options for training hardware.
++ Looked into paid services, will try Colab first.
++ Supervisor mentioned Uni labs might work.
+
+S2 - Week 3:
++ Tried Colab but compute units ran out far to quickly, not financially viable.
++ Looked into other paid services all too expensive.
++ Managed to get project running on lan PCs but only sped up training by small amount.
++ Enquired about using specialised Sussex Uni machine but no luck getting permission.
++ Decided to explore optimising model pipeline.
+
+S2 - Week 4:
++ Dropped one-hot encoding idea from pre-processing steps to save memory usage.
++ Realsied almost half the trainable parameters in the model are realted to the output layer.
++ Dropped BPE vocab size to 5000 from 25000 and processed data agin with this BPE setting.
++ Included batch gradient accumulation during training.
+
+S2 - Week 5:
++ New model now trains in about 2 hours per epoch. Not great but now feasbile to train at home.
++ Initialised new model with all techniques employed.
++ Begin first training cycle with learning rate warm up and cosine decay.
+
+S2 - Week 6:
++ Begin second training cycle.
++ Model finished training with new minimum loss found.
++ Plotting training metrics for report.
++ Began planning evaluation.
++ Generated tracks for evaluation with different generation hyper-parameters.
++ Choose tracks for evaluation.
++ Decided to use google forms for evaluation.
+
+S2 - Week 7:
++ Edited evaluation tracks in Ableton.
++ Sorted tracks into local files for in person evaluation.
++ Began evaluations with some participants.
+
+S2 - Week 8:
++ Continued evaluations, with a total of 10 altogether.
++ Sorted github page out for report.
++ Turned evaluation data into charts for report.
++ Sorted code out for report.
++ Sorted Raw evaluation data out for report.
+
+Easter Break:
++ Began final report first draft
++ Finished first draft
++ Sent to supervisor for feedback
