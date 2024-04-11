@@ -28,9 +28,9 @@ S1 - Week3:
 •	Decided o focus on classical music
 •	Made ADL_classic dataset mainly from ADL piano(1160) with small amounts from classical archive(5) and bitmidi(40). Combined them via python colab and backed them up. Some files in ADL piano would not load due to weird sharp properties.
 •	Thoughts on how to approach development:
-- Generate single track first which satisfies structure, rhythm dynamics etc and sequentially add tracks to original somehow.
-- Generate all tracks at once through a more complicated model.
-- Hybrid approach. Generate initial single track then use multi track model that uses the initial track to generate additional tracks.
+* Generate single track first which satisfies structure, rhythm dynamics etc and sequentially add tracks to original somehow.
+* Generate all tracks at once through a more complicated model.
+* Hybrid approach. Generate initial single track then use multi track model that uses the initial track to generate additional tracks.
 
 S1 - Week 4:
 •	Started initial work on attention RNN for single track MIDI output
